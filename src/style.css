@@ -1,3 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: bisque;
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  height: auto;
+  max-height: 70vh;
+  width: 40%;
+  margin: 0 auto;
+  background-color: rgb(243, 243, 243);
+}
+
+.list__task__title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.icons {
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.circle-icon {
+  top: 15px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list__task__item {
+  padding: 10px 10px;
+  border: 0.2px solid lightgray;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.list__input__task {
+  background-color: inherit;
+  border: none;
+  font-style: italic;
+  padding: 5px;
+  width: 100%;
+}
+
+.list__input__text {
+  background-color: inherit;
+  border: none;
+}
+
+.list__submit__button {
+  background-color: rgb(218, 218, 218);
+  border: none;
+  width: 100%;
+  padding: 15px;
 }

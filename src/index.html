@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wbpack Exercise</title>
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+    />
+
+    <title>Todo List Project App</title>
   </head>
   <body>
-    <h1>Hello webpack!</h1>
+    <main>
+      <div class="title">
+        <h1 class="list__task__title">Today's To Do</h1>
+        <span class="icons circle-icon">&#x021BA;</span>
+      </div>
+
+      <ul class="list">
+        <li class="list__task__item">
+          <input
+            class="list__input__task"
+            type="text"
+            placeholder="Add to your list..."
+          />
+        </li>
+      </ul>
+      <button class="list__submit__button" type="button">
+        Clear all completed
+      </button>
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>
