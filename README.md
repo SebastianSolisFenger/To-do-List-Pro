@@ -10,7 +10,7 @@
 
 ## Author
 
-👤 **Wuletaw Wonte**
+👤 **Sebastian Solis**
 
 - GitHub: [@sebastianDanielSolisFenger](https://github.com/SebastianSolisFenger)
 
