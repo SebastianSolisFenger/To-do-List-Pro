@@ -29,9 +29,8 @@ const DISPLAYTASKS = () => {
     const CHECKBOX = INPUT.cloneNode(true);
     const INPUT_TEXT_CONTAINER = INPUT.cloneNode(true);
     const ICON = SPAN.cloneNode(true);
-    console.log(ICON);
 
-    LI_TASK_ITEM.classList.add("list__task__item", "icons");
+    LI_TASK_ITEM.classList.add("list__task__item");
     CHECKBOX.setAttribute("type", "checkbox");
     CHECKBOX.classList.add("list__checkbox");
     INPUT_TEXT_CONTAINER.setAttribute("type", "text");
@@ -39,7 +38,7 @@ const DISPLAYTASKS = () => {
     INPUT_TEXT_CONTAINER.setAttribute("value", task.description);
     INPUT_TEXT_CONTAINER.classList.add("list__input__text");
     ICON.classList.add("icons");
-    ICON.innerText = "&#x022EE;";
+    ICON.innerHTML = "&#x022EE;";
 
     LI_TASK_ITEM.append(CHECKBOX, INPUT_TEXT_CONTAINER, ICON);
     LISTFORM.appendChild(LI_TASK_ITEM);

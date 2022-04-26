@@ -41,10 +41,17 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: relative;
 }
 
 .icons {
   font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.circle-icon {
+  top: 15px;
 }
 
 .list {
@@ -58,6 +65,7 @@ main {
   border: 0.2px solid lightgray;
   display: flex;
   gap: 10px;
+  position: relative;
 }
 
 .list__input__task {
