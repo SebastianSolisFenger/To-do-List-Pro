@@ -1,11 +1,11 @@
 export default class TasksBluePrint {
   constructor() {
-    this.tasksArr = JSON.parse(localStorage.getItem("tasks")) || [];
+    this.tasksArr = JSON.parse(localStorage.getItem('tasks')) || [];
   }
 
   add(task) {
     this.tasksArr.push(task);
-    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 
   remove(id) {
@@ -13,7 +13,7 @@ export default class TasksBluePrint {
     this.tasksArr.forEach((task, index) => {
       task.index = index + 1;
     });
-    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 
   update(id, description) {
@@ -22,7 +22,7 @@ export default class TasksBluePrint {
         this.tasksArr[arrIndex].description = description;
       }
     });
-    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 
   changeStatus(id, status) {
@@ -31,7 +31,7 @@ export default class TasksBluePrint {
         this.tasksArr[arrIndex].completed = status;
       }
     });
-    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 
   size() {
