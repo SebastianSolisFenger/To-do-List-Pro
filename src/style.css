@@ -1,87 +1,114 @@
-html {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+
+:root {
+  --back-blue: #4096e2;
+  --whiteProto: #fff;
+  --grayProto: #e2dfdf;
+  --gray-2Proto: #f6f6f6;
+  --gray-3Proto: #959595;
+  --blackProto: #000;
+  --black-2Proto: #bdbdbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+body {
+  background-color: var(--back-blue);
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  background-color: lightgrey;
+.main-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-main {
-  height: auto;
-  max-height: 70vh;
-  width: 40%;
-  margin: 0 auto;
-  background-color: rgb(243, 243, 243);
+.todo-div {
+  margin-top: 150px;
+  width: 500px;
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 10px 20px 8px rgb(0 0 0 / 45%);
 }
 
-.list__task__title {
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 10px 20px;
-}
-
-.title {
+.entry-line {
   display: flex;
+  background-color: var(--whiteProto);
+  padding: 5px 15px 5px 15px;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  position: relative;
+  border-bottom: 1.4px solid var(--grayProto);
 }
 
-.icons {
-  font-size: 25px;
-  position: absolute;
-  right: 10px;
-  top: 5px;
+.title-list {
+  border-radius: 10px 10px 0px 0px;
 }
 
-.circle-icon {
-  top: 15px;
+.title-list p {
+  font-size: 18px;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.entry-line p {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
-.list__task__item {
-  padding: 10px 10px;
-  border: 0.2px solid lightgray;
+.inside-list-container {
   display: flex;
+  align-items: center;
   gap: 10px;
-  position: relative;
 }
 
-.list__input__task {
-  background-color: inherit;
-  border: none;
-  font-style: italic;
-  padding: 5px;
+#add-task-form {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  gap: 25px;
 }
 
-.list__input__text {
-  background-color: inherit;
-  border: none;
-}
-
-.list__submit__button {
-  background-color: rgb(218, 218, 218);
-  border: none;
+.input-new-task {
   width: 100%;
-  padding: 15px;
+  height: 38px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.list-btn {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.list-btn i {
+  font-size: 18px;
+  color: var(--gray-3Proto);
+}
+
+.clear-task-line {
+  justify-content: center;
+  height: 50px;
+  border-radius: 0px 0px 10px 10px;
+  cursor: pointer;
+}
+
+.clear-task-line button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.task-description,
+.input-new-task {
+  outline: none;
 }
