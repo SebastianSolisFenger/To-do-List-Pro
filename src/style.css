@@ -46,7 +46,7 @@ body {
 }
 
 .title-list {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 2px 2px;
 }
 
 .title-list p {
@@ -96,7 +96,7 @@ body {
 .clear-task-line {
   justify-content: center;
   height: 50px;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 2px 2px 10px 10px;
   cursor: pointer;
 }
 
