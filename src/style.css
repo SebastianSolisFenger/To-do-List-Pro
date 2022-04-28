@@ -19,16 +19,17 @@
 body {
   background-color: var(--back-blue);
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #6e48aa, #9d50bb);
 }
 
 .main-div {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .todo-div {
-  margin-top: 150px;
   width: 500px;
   border-radius: 10px;
   margin-left: 15px;
