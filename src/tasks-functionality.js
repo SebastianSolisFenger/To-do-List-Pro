@@ -37,4 +37,12 @@ export default class TasksBluePrint {
   funcSize() {
     return this.tasksArr.length;
   }
+
+  removeCompletedTasks() {
+    this.tasksArr = this.tasksArr.filter((task) => !task.completed);
+    this.tasksArr.forEach((task, index) => {
+      task.index = index + 1;
+    });
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
+  }
 }

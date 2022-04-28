@@ -8,6 +8,9 @@
 - Frameworks: none
 - Technologies used: Webpack
 
+## LIVE DEMO
+https://sebastiansolisfenger.github.io/To-do-List-Pro/dist/
+
 ## Author
 
 👤 **Sebastian Solis**
