@@ -47,7 +47,7 @@ const createDynamicTasks = () => {
       )
       .join('');
     tasksContainers.innerHTML
-      += '<div class="entry-line clear-task-line"><button id="remove-completed" type="button">Clear all completed</button></div>';
+      += '<div class="entry-line clear-task-line"><button id="remove-completed-btn" type="button">Clear all completed</button></div>';
 
     const taskDescriptions = document.querySelectorAll('.task-description');
     const deleteBtns = document.querySelectorAll('.remove-btn');
@@ -72,6 +72,13 @@ const createDynamicTasks = () => {
         });
         createDynamicTasks();
       });
+    });
+
+    const deleteCompletedBtn = document.getElementById('remove-completed-btn');
+
+    deleteCompletedBtn.addEventListener('click', () => {
+      copyTasksBluePrint.removeCompletedTasks();
+      createDynamicTasks();
     });
 
     taskDescriptions.forEach((taskObjItem) => {
