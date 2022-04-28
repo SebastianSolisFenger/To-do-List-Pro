@@ -1,48 +1,109 @@
 import './style.css';
+import TasksBluePrint from './tasks-functionality.js';
 
-const LISTFORM = document.querySelector('.list');
-const LITASKCON = document.createElement('li');
-const INPUT = document.createElement('input');
-const SPAN = document.createElement('span');
+const copyTasksBluePrint = new TasksBluePrint();
 
-const TASKSARR = [
-  {
-    description: 'Clean the living room',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Wash the dishes',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Tidy my desktop',
-    completed: false,
-    index: 2,
-  },
-];
+const tasksContainers = document.getElementById('tasks-div');
 
-const DISPLAYTASKS = () => {
-  TASKSARR.forEach((task) => {
-    const LI_TASK_ITEM = LITASKCON.cloneNode(true);
-    const CHECKBOX = INPUT.cloneNode(true);
-    const INPUT_TEXT_CONTAINER = INPUT.cloneNode(true);
-    const ICON = SPAN.cloneNode(true);
+const createDynamicTasks = () => {
+  tasksContainers.innerHTML = `
+   <div class="entry-line title-list">
+        <p>Today's ToDo List</p>
+        <button type="button" class="list-btn">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+      </div>
+      <div class="entry-line">
+        <form id="add-task-form">
+          <input
+            class="input-new-task"
+            required
+            placeholder="Add to your list.."
+          >
+          <button type='submit' class='list-btn add-task-btn'><i class='fa-solid fa-plus'></i></button>
+        </form>
+      </div>`;
 
-    LI_TASK_ITEM.classList.add('list__task__item');
-    CHECKBOX.setAttribute('type', 'checkbox');
-    CHECKBOX.classList.add('list__checkbox');
-    INPUT_TEXT_CONTAINER.setAttribute('type', 'text');
-    INPUT_TEXT_CONTAINER.setAttribute('name', 'task');
-    INPUT_TEXT_CONTAINER.setAttribute('value', task.description);
-    INPUT_TEXT_CONTAINER.classList.add('list__input__text');
-    ICON.classList.add('icons');
-    ICON.innerHTML = '&#x022EE;';
+  if (copyTasksBluePrint.tasksArr.length !== 0) {
+    tasksContainers.innerHTML += copyTasksBluePrint.tasksArr
+      .sort((a, b) => a.index - b.index)
+      .map(
+        (
+          task,
+        ) => `<div class='entry-line task-item-line'><div class='inside-list-container'><input class='task-status' data-id='${
+          task.index
+        }' type='checkbox' ${
+          task.completed ? 'checked' : ''
+        }><p class='task-description' id="desc${
+          task.index
+        }" contenteditable='true' data-tid='${task.index}'>${
+          task.description
+        }</p>
+          </div>
+          <button type='button' data-taskid='${task.index}' id='delete${
+  task.index
+}' class='list-btn remove-btn'><i class='fa-solid fa-trash-can'></i></button>
+          </div>`,
+      )
+      .join('');
+    tasksContainers.innerHTML
+      += '<div class="entry-line clear-task-line"><button id="remove-completed" type="button">Clear all completed</button></div>';
 
-    LI_TASK_ITEM.append(CHECKBOX, INPUT_TEXT_CONTAINER, ICON);
-    LISTFORM.appendChild(LI_TASK_ITEM);
+    const taskDescriptions = document.querySelectorAll('.task-description');
+    const deleteBtns = document.querySelectorAll('.remove-btn');
+
+    deleteBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        copyTasksBluePrint.remove(btn.dataset.taskid);
+        createDynamicTasks();
+      });
+    });
+
+    const taskStatusesInfo = document.querySelectorAll('.task-status');
+
+    taskStatusesInfo.forEach((status) => {
+      status.addEventListener('change', () => {
+        copyTasksBluePrint.changeStatus(status.dataset.id, status.checked);
+        taskDescriptions.forEach((desc) => {
+          if (desc.dataset.tid === status.dataset.id) {
+            desc.classList.add('task-line-through');
+            desc.style = 'color: red;';
+          }
+        });
+        createDynamicTasks();
+      });
+    });
+
+    taskDescriptions.forEach((taskObjItem) => {
+      taskObjItem.addEventListener('keyup', () => {
+        copyTasksBluePrint.update(
+          taskObjItem.dataset.tid,
+          taskObjItem.textContent,
+        );
+      });
+      taskObjItem.addEventListener('focus', () => {
+        taskObjItem.parentElement.parentElement.style = 'background-color: rgb(255 234 99)';
+      });
+      taskObjItem.addEventListener('blur', () => {
+        taskObjItem.parentElement.parentElement.style = 'background-color: #fff';
+      });
+    });
+  }
+
+  const submitTaskForm = document.getElementById('add-task-form');
+  const newTask = document.querySelector('.input-new-task');
+
+  submitTaskForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const upcomingtask = {
+      description: newTask.value,
+      completed: false,
+      index: copyTasksBluePrint.funcSize() + 1,
+    };
+    copyTasksBluePrint.add(upcomingtask);
+    newTask.value = '';
+    createDynamicTasks();
   });
 };
 
-DISPLAYTASKS();
+window.onload = createDynamicTasks();
