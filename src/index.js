@@ -98,7 +98,7 @@ const createDynamicTasks = () => {
     const upcomingtask = {
       description: newTask.value,
       completed: false,
-      index: copyTasksBluePrint.size() + 1,
+      index: copyTasksBluePrint.funcSize() + 1,
     };
     copyTasksBluePrint.add(upcomingtask);
     newTask.value = '';

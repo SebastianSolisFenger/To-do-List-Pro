@@ -34,7 +34,7 @@ export default class TasksBluePrint {
     localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 
-  size() {
+  funcSize() {
     return this.tasksArr.length;
   }
 }

@@ -36,6 +36,10 @@ body {
   box-shadow: 10px 20px 8px rgb(0 0 0 / 45%);
 }
 
+.light-house-avoid-error {
+  display: none;
+}
+
 .entry-line {
   display: flex;
   background-color: var(--whiteProto);
@@ -106,6 +110,7 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .task-description,
