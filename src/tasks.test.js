@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import TasksBluePrint from "./tasks-functionality.js";
+import TasksBluePrint from './tasks-functionality.js';
 
 document.body.innerHTML = `
  <div class="entry-line title-list">
@@ -28,19 +28,19 @@ document.body.innerHTML = `
 <button id="remove-completed-btn" type="button">Clear all completed</button>
 </div>`;
 
-describe("add and remove", () => {
+describe('add and remove', () => {
   window.localStorage = Storage.prototype;
-  test("Add task", () => {
+  test('Add task', () => {
     const todoList = new TasksBluePrint();
     const newTodo = {
-      id: "id123",
-      description: "task1",
+      id: '1',
+      description: 'task1',
       completed: false,
       index: 1,
     };
     const newTodo2 = {
-      id: "id12sdad3",
-      description: "task2",
+      id: '2',
+      description: 'task2',
       completed: false,
       index: 2,
     };
@@ -48,46 +48,46 @@ describe("add and remove", () => {
     expect(todoList.tasksArr).toHaveLength(1);
     todoList.add(newTodo2);
     expect(todoList.tasksArr).toHaveLength(2);
-    expect(todoList.tasksArr[1].description).toBe("task2");
+    expect(todoList.tasksArr[1].description).toBe('task2');
   });
 
-  test("remove task", () => {
+  test('remove task', () => {
     const todoList = new TasksBluePrint();
     const newTodo = {
-      id: "id4d5sa",
-      description: "task3",
+      id: '3',
+      description: 'task3',
       completed: false,
       index: 3,
     };
     todoList.add(newTodo);
     todoList.remove(newTodo.id);
-    expect(todoList.tasksArr[1].description).toBe("task2");
+    expect(todoList.tasksArr[1].description).toBe('task2');
     expect(todoList.tasksArr).toHaveLength(2);
   });
 });
 
-describe("Edit test", () => {
-  test("Editing", () => {
+describe('Edit test', () => {
+  test('Editing', () => {
     const todoList = new TasksBluePrint();
     const newTodo3 = {
-      id: "gfgdgrg",
-      description: "task33",
+      id: '3',
+      description: 'task33',
       completed: false,
       index: 3,
     };
     todoList.add(newTodo3);
-    todoList.update(newTodo3.id, "asd");
-    expect(todoList.tasksArr[2].description).toBe("asd");
+    todoList.update(newTodo3.id, 'asd');
+    expect(todoList.tasksArr[2].description).toBe('asd');
     expect(todoList.tasksArr).toHaveLength(3);
   });
 });
 
-describe("complete test", () => {
-  test(" updating an items completed status", () => {
+describe('complete test', () => {
+  test(' updating an items completed status', () => {
     const todoList = new TasksBluePrint();
     const newTodo4 = {
-      id: "dasasds5sa",
-      description: "task5",
+      id: '4',
+      description: 'task5',
       completed: false,
       index: 4,
     };
@@ -98,11 +98,11 @@ describe("complete test", () => {
   });
 });
 
-describe("Clear all completed", () => {
-  test("clear items completed", () => {
+describe('Clear all completed', () => {
+  test('clear items completed', () => {
     const todoList = new TasksBluePrint();
     todoList.removeCompletedTasks();
-    expect(todoList.tasksArr).toHaveLength(4);
+    expect(todoList.tasksArr).toHaveLength(3);
     expect(todoList.tasksArr[1].completed).toBeFalsy();
   });
 });
