@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">4.76% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/21</span>
+                <span class='fraction'>18/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">8.33% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/12</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5% </span>
+                <span class="strong">85% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/20</span>
+                <span class='fraction'>17/20</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,94 +117,94 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default class TasksBluePrint {
   constructor() {
-    this.tasksArr = JSON.parse(localStorage.getItem("tasks")) || <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+    this.tasksArr = JSON.parse(localStorage.getItem("tasks")) || [];
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ad</span>d(task) {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.push(task);</span>
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));</span>
+  add(task) {
+    this.tasksArr.push(task);
+    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>move(id) {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.splice(id - 1, 1);</span>
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.forEach(<span class="fstat-no" title="function not covered" >(t</span>ask, index) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      task.index = index + 1;</span>
+  remove(id) {
+    this.tasksArr.splice(id - 1, 1);
+    this.tasksArr.forEach((task, index) =&gt; {
+      task.index = index + 1;
     });
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));</span>
+    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  up</span>date(id, description) {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem, arrIndex) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (item.index === parseInt(id, 10)) {</span>
+  update(id, description) {
+    this.tasksArr.forEach((item, arrIndex) =&gt; {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (item.index === parseInt(id, 10)) {
 <span class="cstat-no" title="statement not covered" >        this.tasksArr[arrIndex].description = description;</span>
       }
     });
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));</span>
+    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ch</span>angeStatus(id, status) {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem, arrIndex) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (item.index === parseInt(id, 10)) {</span>
+  changeStatus(id, status) {
+    this.tasksArr.forEach((item, arrIndex) =&gt; {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (item.index === parseInt(id, 10)) {
 <span class="cstat-no" title="statement not covered" >        this.tasksArr[arrIndex].completed = status;</span>
       }
     });
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));</span>
+    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  fu</span>ncSize() {
 <span class="cstat-no" title="statement not covered" >    return this.tasksArr.length;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>moveCompletedTasks() {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr = this.tasksArr.filter(<span class="fstat-no" title="function not covered" >(t</span>ask) =&gt; <span class="cstat-no" title="statement not covered" >!task.completed)</span>;</span>
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.forEach(<span class="fstat-no" title="function not covered" >(t</span>ask, index) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      task.index = index + 1;</span>
+  removeCompletedTasks() {
+    this.tasksArr = this.tasksArr.filter((task) =&gt; !task.completed);
+    this.tasksArr.forEach((task, index) =&gt; {
+      task.index = index + 1;
     });
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));</span>
+    localStorage.setItem("tasks", JSON.stringify(this.tasksArr));
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -214,7 +214,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue May 03 2022 13:26:20 GMT-0300 (Argentina Standard Time)
+                at Tue May 03 2022 14:07:24 GMT-0300 (Argentina Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>

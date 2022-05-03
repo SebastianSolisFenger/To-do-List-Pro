@@ -102,7 +102,7 @@ describe("Clear all completed", () => {
   test("clear items completed", () => {
     const todoList = new TasksBluePrint();
     todoList.removeCompletedTasks();
-    expect(todoList.tasksArr).toHaveLength(3);
+    expect(todoList.tasksArr).toHaveLength(4);
     expect(todoList.tasksArr[1].completed).toBeFalsy();
   });
 });
