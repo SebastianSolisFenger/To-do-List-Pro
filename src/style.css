@@ -53,14 +53,6 @@ body {
   text-decoration: line-through;
 }
 
-.task-status:checked + p {
-  text-decoration: line-through;
-}
-
-.title-list {
-  border-radius: 10px 10px 2px 2px;
-}
-
 .title-list p {
   font-size: 18px;
 }
@@ -69,6 +61,14 @@ body {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+}
+
+.task-status:checked + p {
+  text-decoration: line-through;
+}
+
+.title-list {
+  border-radius: 10px 10px 2px 2px;
 }
 
 .inside-list-container {
