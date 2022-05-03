@@ -49,6 +49,14 @@ body {
   border-bottom: 1.4px solid var(--grayProto);
 }
 
+.task-line-through {
+  text-decoration: line-through;
+}
+
+.task-status:checked + p {
+  text-decoration: line-through;
+}
+
 .title-list {
   border-radius: 10px 10px 2px 2px;
 }
