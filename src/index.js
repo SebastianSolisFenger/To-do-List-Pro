@@ -65,7 +65,9 @@ const createDynamicTasks = () => {
       status.addEventListener('change', () => {
         copyTasksBluePrint.changeStatus(status.dataset.id, status.checked);
         taskDescriptions.forEach((desc) => {
-          if (desc.dataset.tid === status.dataset.id) {
+          if (
+            parseInt(desc.dataset.tid, 10) === parseInt(status.dataset.id, 10)
+          ) {
             desc.classList.add('task-line-through');
             desc.style = 'color: red;';
           }
