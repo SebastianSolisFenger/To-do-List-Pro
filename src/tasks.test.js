@@ -5,28 +5,27 @@
 import TasksBluePrint from './tasks-functionality.js';
 
 document.body.innerHTML = `
- <div class="entry-line title-list">
-        <p>Today's ToDo List</p>
-        <button type="button" class="list-btn">
-          <i class="fa-solid fa-arrows-rotate"></i>
-        </button>
-      </div>
-      <div class="entry-line">
-        <form id="add-task-form">
-          <input
-            class="input-new-task"
-            required
-            placeholder="Add to your list.."
-          >
-          <button type='submit' class='list-btn add-task-btn'><i class='fa-solid fa-plus'></i></button>
-        </form>
-      </div>
+<div class="entry-line title-list">
+  <p>Today's ToDo List</p>
+  <button type="button" class="list-btn">
+    <i class="fa-solid fa-arrows-rotate"></i>
+  </button>
+</div>
+<div class="entry-line">
+  <form id="add-task-form">
+    <input class="input-new-task" required placeholder="Add to your list.." />
+    <button type="submit" class="list-btn add-task-btn">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </form>
+</div>
 <div id="tasks-div">
-<!-- Add Todos Automatically -->
+  <!-- Add Todos Automatically -->
 </div>
 <div class="entry-line clear-task-line">
-<button id="remove-completed-btn" type="button">Clear all completed</button>
-</div>`;
+  <button id="remove-completed-btn" type="button">Clear all completed</button>
+</div> 
+`;
 
 describe('add and remove', () => {
   window.localStorage = Storage.prototype;

@@ -9,6 +9,7 @@
 - Technologies used: Webpack
 
 ## LIVE DEMO
+
 https://sebastiansolisfenger.github.io/To-do-List-Pro/dist/
 
 ## Author
@@ -17,8 +18,14 @@ https://sebastiansolisfenger.github.io/To-do-List-Pro/dist/
 
 - GitHub: [@sebastianDanielSolisFenger](https://github.com/SebastianSolisFenger)
 
+👤 **Luis pomare**
+
+- GitHub: [@luis-pomare](https://github.com/luis-pomare)
+- Twitter: [@LuisPomare1](https://twitter.com/LuisPomare1)
+- LinkedIn: [luis-pomare-388116225](https://www.linkedin.com/in/luis-pomare-388116225/)
 
 # Install Instruction
+
 1. Open your terminal and `cd` to a proper location.
 2. Clone the Repo on you computer using `git clone git@github.com:SebastianSolisFenger/To-do-List-Pro.git`
 3. Make sure you have JavaScript installed; use `js -v` .
@@ -28,6 +35,7 @@ https://sebastiansolisfenger.github.io/To-do-List-Pro/dist/
 7. Then `npm start`
 
 ## Prerequisites
+
 Node.JS
 
 ## 🤝 Contributing
