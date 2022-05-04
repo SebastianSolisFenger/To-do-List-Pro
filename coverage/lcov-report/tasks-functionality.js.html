@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">71.42% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/21</span>
+                <span class='fraction'>15/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/12</span>
+                <span class='fraction'>8/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/20</span>
+                <span class='fraction'>15/20</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -113,12 +113,12 @@
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,21 +130,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,22 +177,22 @@
     localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  up</span>date(id, description) {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem, arrIndex) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (item.index === parseInt(id, 10)) {</span>
-<span class="cstat-no" title="statement not covered" >        this.tasksArr[arrIndex].description = description;</span>
+  update(id, description) {
+    this.tasksArr.forEach((item, arrIndex) =&gt; {
+      if (item.index === parseInt(id, 10)) {
+        this.tasksArr[arrIndex].description = description;
       }
     });
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));</span>
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ch</span>angeStatus(id, status) {
-<span class="cstat-no" title="statement not covered" >    this.tasksArr.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem, arrIndex) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (item.index === parseInt(id, 10)) {</span>
-<span class="cstat-no" title="statement not covered" >        this.tasksArr[arrIndex].completed = status;</span>
+  changeStatus(id, status) {
+    this.tasksArr.forEach((item, arrIndex) =&gt; {
+      if (item.index === parseInt(id, 10)) {
+        this.tasksArr[arrIndex].completed = status;
       }
     });
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));</span>
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArr));
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  fu</span>ncSize() {
@@ -214,7 +214,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed May 04 2022 10:10:36 GMT-0500 (Colombia Standard Time)
+                at Wed May 04 2022 17:11:28 GMT-0300 (Argentina Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>
