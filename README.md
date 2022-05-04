@@ -12,7 +12,7 @@
 
 https://sebastiansolisfenger.github.io/To-do-List-Pro/dist/
 
-![image](https://user-images.githubusercontent.com/88522494/166742729-761b8022-2c6a-4f0b-b525-7b72d6ccc15d.png)
+![image](https://user-images.githubusercontent.com/88522494/166743696-1af83251-82cf-4047-8bf8-59cd56ed4317.png)
 
 ## Author
 
