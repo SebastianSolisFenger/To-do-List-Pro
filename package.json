@@ -1,10 +1,16 @@
 {
   "name": "webpack-config",
+  "jest": {
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  },
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest --coverage --verbose --watch",
+    "test": "jest --coverage --env=jsdom",
     "build:dev": "npx webpack --mode development --watch",
     "build:pro": "npx webpack --mode production",
     "start": "npx webpack serve --open --mode development"
