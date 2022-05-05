@@ -1,5 +1,5 @@
-import TasksBluePrint from "./tasks-functionality.js";
-import newObj from "./mock-local.js";
+import TasksBluePrint from './tasks-functionality.js';
+import newObj from './mock-local.js';
 
 document.body.innerHTML = `
 <div class="entry-line title-list">
@@ -23,13 +23,13 @@ document.body.innerHTML = `
 </div>
 `;
 
-describe("add and remove", () => {
+describe('add and remove', () => {
   global.localStorage = newObj;
-  test("Add task", () => {
+  test('Add task', () => {
     const todoList = new TasksBluePrint();
     const newTodo = {
-      id: "1",
-      description: "task1",
+      id: '1',
+      description: 'task1',
       completed: false,
       index: 1,
     };
@@ -38,49 +38,49 @@ describe("add and remove", () => {
     expect(todoList.tasksArr).toHaveLength(1);
 
     // storage mocked data
-    const storedData = JSON.parse(localStorage.getItem("tasks"));
+    const storedData = JSON.parse(localStorage.getItem('tasks'));
     expect(storedData).not.toBe(null);
     expect(localStorage).toHaveLength(1);
-    expect(storedData[0].description).toBe("task1");
+    expect(storedData[0].description).toBe('task1');
   });
 
-  test("remove task", () => {
+  test('remove task', () => {
     const todoList = new TasksBluePrint();
     const newTodo1 = {
-      id: "2",
-      description: "task2",
+      id: '2',
+      description: 'task2',
       completed: false,
       index: 2,
     };
     todoList.add(newTodo1);
     todoList.remove(newTodo1.id);
-    expect(todoList.tasksArr[0].description).toBe("task1");
+    expect(todoList.tasksArr[0].description).toBe('task1');
     expect(todoList.tasksArr).toHaveLength(1);
   });
 });
 
-describe("Edit test", () => {
-  test("Editing", () => {
+describe('Edit test', () => {
+  test('Editing', () => {
     const todoList = new TasksBluePrint();
     const newTodo2 = {
-      id: "2",
-      description: "task33",
+      id: '2',
+      description: 'task33',
       completed: false,
       index: 2,
     };
     todoList.add(newTodo2);
-    todoList.update(newTodo2.id, "asd");
-    expect(todoList.tasksArr[1].description).toBe("asd");
+    todoList.update(newTodo2.id, 'asd');
+    expect(todoList.tasksArr[1].description).toBe('asd');
     expect(todoList.tasksArr).toHaveLength(2);
   });
 });
 
-describe("complete test", () => {
-  test(" updating an item completed status", () => {
+describe('complete test', () => {
+  test(' updating an item completed status', () => {
     const todoList = new TasksBluePrint();
     const newTodo3 = {
-      id: "3",
-      descrition: "task5",
+      id: '3',
+      descrition: 'task5',
       completed: false,
       index: 3,
     };
@@ -91,8 +91,8 @@ describe("complete test", () => {
   });
 });
 
-describe("Clear all completed", () => {
-  test("Clear completed items", () => {
+describe('Clear all completed', () => {
+  test('Clear completed items', () => {
     const todoList = new TasksBluePrint();
     todoList.removeCompletedTasks();
     expect(todoList.tasksArr).toHaveLength(2);
