@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import TasksBluePrint from './tasks-functionality.js';
 
 document.body.innerHTML = `

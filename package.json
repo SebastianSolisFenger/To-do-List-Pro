@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest --verbose --watch",
+    "test": "jest --coverage --env=jsdom",
     "build:dev": "npx webpack --mode development --watch",
     "build:pro": "npx webpack --mode production",
     "start": "npx webpack serve --open --mode development"
@@ -44,5 +44,11 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "jest": {
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
   }
 }
